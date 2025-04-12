@@ -1,0 +1,15 @@
+java -DconfigFile=notifications/telegram.json -jar notifications/allure-notifications-4.9.0.jar
+
+java \
+  -DconfigFile=notifications/telegram.json \
+  -Dallure.results.directory=build/allure-results \
+  -jar notifications/allure-notifications-4.9.0.jar
+
+echo 'export PATH="/opt/homebrew/opt/allure:$PATH"' >> ~/.zprofile
+source ~/.zprofile
+
+7180756173:AAHED6gExH-f5MpYP8R1mbbxRDw8_ZTR6n8
+639177218
+
+-1002302391360
+curl -X POST "https://api.telegram.org/bot7180756173:AAHED6gExH-f5MpYP8R1mbbxRDw8_ZTR6n8/sendMessage" -d "chat_id=639177218&text=Test Status: Passed"

@@ -1,0 +1,18 @@
+{
+  "telegram": {
+    "token": "7180756173:AAHED6gExH-f5MpYP8R1mbbxRDw8_ZTR6n8",
+    "chat": "-1002302391360"
+  },
+  "base": {
+    "allureFolder": "allure-results",
+    "project": "LinkedIn UI Tests"
+  },
+  "phrases": "notifications/phrases/default.json",
+  "report": {
+    "showStatuses": ["failed", "passed"],
+    "showChart": true,
+    "showDuration": true,
+    "showAllPassed": true
+  }
+}
+

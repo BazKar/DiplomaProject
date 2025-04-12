@@ -1,0 +1,41 @@
+plugins {
+    id 'java'
+    id 'io.qameta.allure' version "2.12.0"
+}
+
+group = 'quru.qa'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+allure {
+    version = '2.23.0'
+    useJUnit5 {
+        version = '2.23.0'
+    }
+}
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation ('org.junit.jupiter:junit-jupiter:5.9.2',
+            "com.codeborne:selenide:7.7.1",
+            "io.qameta.allure:allure-selenide:2.19.0",
+            'com.fasterxml.jackson.core:jackson-databind:2.17.0',
+            'io.qameta.allure:allure-rest-assured:2.25.0',
+            "org.apache.maven:maven-plugin-api:3.9.9",
+            "io.rest-assured:rest-assured:5.5.1",
+            "org.projectlombok:lombok:1.18.38",
+            "io.qameta.allure:allure-junit5:2.29.1",
+            'com.fasterxml.jackson.core:jackson-databind:2.13.0'
+    )
+    compileOnly 'org.projectlombok:lombok:1.18.38'
+    annotationProcessor 'org.projectlombok:lombok:1.18.30'
+
+    testCompileOnly 'org.projectlombok:lombok:1.18.30'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.30'
+}
+
+
+test {
+    useJUnitPlatform()
+}
